@@ -1,0 +1,2694 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Background: #197f5b;
+    --Background2: #ffffff;
+    --Pallete: #c9c9c9;
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #ef9919;
+    --color4: #000000;
+    --color5: #000000;
+    --color6: #197f5b;
+    --color7: #c9c9c9;
+    --color8: #197f5b;
+    --color9: #ef9919;
+}
+
+body.darkmode {
+    --Background: #000000;
+    --Background2: #5c258d;
+    --Pallete: #5c258d;
+    --color1: #00FFFF;
+    --color2: #000000;
+    --color3: #5c258d;
+    --color4: #5c258d;
+    --color5: #00FFFF;
+    --color6: #00FFFF;
+    --color7: #c9c9c9;
+    --color8: #5c258d;
+    --color9: #00FFFF;   
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+   
+}
+/***********************************************************BODY***************************************************/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Background);
+    
+}
+.container_nav {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+nav {
+    display: flex;
+    background-color: var(--Background);
+    justify-content: center;
+}
+.boton {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu_navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35rem;
+    height: 100%;
+    background-color: var(--Background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    font-size: 3rem;
+    z-index: 2;
+    text-transform: uppercase;
+    -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+    gap: 0.1rem;
+    box-sizing: content-box;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu_navegacion a {
+    position:relative;
+    font-size: 3rem;
+    text-decoration: none;
+    line-height: 3rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+    color: transparent;
+}
+.Button::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    transition: 1s;
+    overflow: hidden;
+    border-right: 1px solid  var(--clr);
+    -webkit-text-stroke: 1px  var(--clr);
+  }
+  .Button:hover::before{
+    width: 100%;
+    filter: drop-shadow(0px 0px 45px var(--clr));
+  }
+  .spread {
+    transform: translate(0);
+}
+.container_nav img{
+    background-color: var(--color9);
+    z-index: 9000;
+}
+
+header {
+    background-color: var(--Background);
+    height: 91rem;
+     
+}
+/***********************************************************SWITCH***************************************************/
+.container__toggle {
+    display: flex;
+    position: relative;
+    background-color: var(--Background);
+    width: 100%;
+    height: 3.7rem;
+    justify-content: flex-start;
+    margin-top: .6rem;
+    margin-left: 2rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.toggle {
+    background-color: var(--color1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0.2rem;
+    width: 7rem;
+    left: 0rem;
+    gap: 1.2rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    filter: drop-shadow(.1rem .1rem .3rem #c9c9c9);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D3D3D3), color-stop(100%, #D3D3D3));
+}
+.toggle::-moz-focus-inner {
+    border: 0;
+}
+.toggle > .sun {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 2px;
+    color: #ef9919;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.toggle > .moon {
+    position: relative;
+    top: 1px;
+    right: 5px;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.ball {
+    display: flex;
+    position: absolute;
+    background-color: var(--color3);
+    width: 2.9rem;
+    height: 3rem;
+    left: 3.8rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.ball-move {
+    left: 0.3rem;
+}
+/**************************************************************HEADER***********************************************/
+.titulo__reseña__img__redes__colaboracion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--Background);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container_titulo {
+    position: relative;
+    background-color: var(--Background);
+    display: flex;
+    width: 70%;
+    top: 2rem;
+    letter-spacing: 0.2;
+    align-items: center;
+    justify-content: center;
+}
+.container_titulo > h1 {
+    position: relative;
+    display: flex;
+    font-size: 6rem;
+    font-weight: lighter;
+    margin: 1rem 1rem 1rem 1rem;
+    gap: 2.5rem;
+    color: var(--color1);
+    justify-content: center;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.container_titulo > h1+span {
+    position: relative;
+    display: flex;
+}
+.nombre {
+    color: var(--color3);
+    font-weight: bold;
+}
+.container_reseña {
+    background-color: var(--Background);
+    position: relative;
+    display: flex;
+    width: 65%;
+    height: 12rem;
+    bottom: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    text-align: justify;
+}
+.container_reseña > p {
+    font-size: 2.7rem;
+    color: var(--color1);
+    filter: drop-shadow(.2rem .2rem 1rem #ffff);
+    font-weight: bold;
+    justify-content: center;
+}
+.container_img {
+    position: relative;
+    display: flex;
+    bottom: 7rem;
+    align-items: center;
+}
+.container_card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color1);
+    width: 10rem;
+    height: 5.1rem;
+    bottom: 45rem;
+    left: -15rem;
+    padding: 1rem 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+    filter: drop-shadow(.3rem .3rem 1rem #ffff);
+}
+.container_card1 > h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color2);
+}
+.container_card1 > h3+p {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color3);
+}
+.container_card2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color1);
+    width: 10rem;
+    height: 5.1rem;
+    bottom: 30rem;
+    left: 15rem;
+    padding: 1rem 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+    filter: drop-shadow(.3rem .3rem 1rem #ffff);
+}
+.container_card2 > h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color2);
+}
+.container_card2 > h3+p {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color3);
+}
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    bottom: 20rem;
+}
+.main .navigation {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.main .navigation span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--color1);
+    border-radius: 50%;
+    transform: translate(calc(16px * var(--x)), calc(16px * var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(.3rem .3rem 1rem #ffff);
+}
+.main .navigation.active span {
+    width: 110px;
+    height: 110px;
+    border-radius: 1rem;
+    background-color: var(--color1);
+    border-radius: 50%;
+    transform: translate(calc(140px * var(--x)), calc(140px * var(--y)));
+    filter: drop-shadow(.3rem .3rem 1rem #ffff);
+}
+.main .navigation span ion-icon {
+    transition: 0.5s;
+    font-size: 0;
+}
+.main .navigation.active span ion-icon {
+    font-size: 2.5rem;
+    color: var(--Background);
+}
+.main .navigation.active span:hover ion-icon {
+    color: var(--color1);
+    font-size: 65px;
+    filter: drop-shadow(0 0 2px #197f5b) drop-shadow(0 0 3px #197f5b) drop-shadow(0 0 12px #197f5b);
+}
+.close {
+    position: absolute;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color1);
+    border-radius: 50%;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .navigation.active~.close {
+    width: 60px;
+    height: 60px;
+    pointer-events: initial;
+    transition-delay: 0.8s;
+    background: var(--color3);
+}
+.main .navigation~.close ion-icon {
+    font-size: 3rem;
+    scale: 0;
+    color: var(--color2);
+    transition: 0.5s;
+}
+.main .navigation.active~.close ion-icon {
+    scale: 1;
+    transition-delay: 1s;
+}
+.container_colaboracion {
+    display: flex;
+    position: relative;
+    background-color: var(--color7);
+    width: 50rem;
+    height: 12rem;
+    bottom: 14rem;
+    left: 1rem;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.container_detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50rem;
+    height: 3rem;
+    right: -1.2rem;
+    top: 2rem;
+    left: 0;
+}
+.container_detalle>h3 {
+    font-size: 1.5rem;
+    color: var(--color2);
+    font-weight: bold;
+}
+.container_correo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50rem;
+    height: 3.5rem;
+    top: 6rem;
+}
+.mail_bar {
+    position: absolute;
+    display: flex;
+    width: 48rem;
+    height: 3rem;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.mail_bar::placeholder {
+    font-size: 1.3rem;
+    padding: 2rem;
+    color: var(--color2);
+}
+.boton_mail {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--color6);
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.boton_mail>span {
+    font-size: 1.2rem;
+    color: var(--color2);
+}
+.boton_mail:hover {
+    width: 10.5rem;
+    height: 3.5rem;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+    cursor: pointer;
+}
+
+/***********************************************************MAIN*********************************************************************/
+.subtitulo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color5);
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+section {
+    background: var(--Background2);
+}
+.about_me {
+    position: relative;
+    display: flex;
+    top: 5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    height: 40rem;
+}
+.container_about_me>h3 {
+    top: 2rem;
+    right: 26rem;
+}
+.container_parrafo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 2.5rem;
+    height: 18rem;
+    padding: 1rem 2rem;
+}
+.container_parrafo>p {
+    font-size: 1.2rem;
+}
+.linea {
+    display: flex;
+    position: absolute;
+    background-color: var(--Background);
+    width: 0.35rem;
+    height: 21rem;
+    left: 1.5rem;
+    bottom: 8rem;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.container_button {
+    position: relative;
+    display: flex;
+    top: 3rem;
+    width: 18rem;
+    height: 6rem;
+    left: 2rem;
+}
+.button {
+    color: var(--color2);
+    background-color: var(--color6);
+    border-radius: 2rem;
+    width: 15rem;
+    height: 4.5rem;
+    border: 1px solid #ffff;
+    cursor: pointer;
+}
+.button span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color2);
+}
+.button:hover {
+    width: 17rem;
+    height: 4.9rem;
+    cursor: pointer;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.estudios {
+    height: 40rem;
+    display: flex;
+    position: relative;
+    top: 5rem;
+}
+.container_estudios {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    top: 0rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container_estudios>h3 {
+    display: flex;
+    position: relative;
+    bottom: 5rem;
+    
+    justify-content: center;
+}
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 25rem;
+    justify-content: center;
+    gap: 2rem;
+    width: 55rem;
+}
+.card_1 {
+    background-color: var(--color7);
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.card_2 {
+    background-color: var(--color7);
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    left: 3rem;
+    filter: drop-shadow(.1rem .1rem .3rem #c9c9c9);
+}
+.container_logo_img {
+    width: 6rem;
+    height: 6rem;
+}
+.card_1>.container_logo_img img {
+    position: relative;
+    top: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+.container_universidad {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+}
+.container_universidad>h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color2);
+}
+.container_age>h6 {
+    position: relative;
+    font-size: 1rem;
+    color: var(--color2);
+}
+.container_titulacion>h5 {
+    position: relative;
+    font-size: 1rem;
+}
+.card_2>.container_logo_img img {
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    width: 8rem;
+    height: 10rem;
+}
+.My_Skills {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 45rem;
+    top: 4rem;
+}
+.caja_padre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.container_Myskills {
+    width: 100%;
+    height: 30rem;
+    padding: 30px 30px;
+    background-color: var(--color7);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: var(--color2);
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.container_subtitulo .Myskills>h3 {
+
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.skills:not(:last-child) {
+    margin-bottom: 30px;
+}
+.detalles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.menu {
+    position: relative;
+    border: 1px solid cyan;
+    border-radius: 20px;
+    top: -40px;
+}
+.menu div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--color6);
+}
+#Web_Desing_menu {
+    animation: web_desing_barra 2s forwards;
+}
+@keyframes web_desing_barra {
+    100% {
+        width: 80%;
+    }
+}
+#Interaction_Desing_menu {
+    animation: Interaction_Desing_barra 2s forwards;
+}
+@keyframes Interaction_Desing_barra {
+    100% {
+        width: 95%;
+    }
+}
+#UX_UI_menu {
+    animation: UX_UI_barra 2s forwards;
+}
+@keyframes UX_UI_barra {
+    100% {
+        width: 80%;
+    }
+}
+#Frameworks_menu {
+    animation: Frameworks_barra 2s forwards;
+}
+@keyframes Frameworks_barra {
+    100% {
+        width: 75%;
+    }
+}
+.experience {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my_experience {
+    width: 30rem;
+    display: flex;
+    height: 25rem;
+    align-items: center;
+    justify-content: center;
+}
+.my_experience>h3 {
+    display: flex;
+    position: relative;
+    bottom: 5rem;
+}
+.contenedor_logos {
+    display: flex;
+    align-items: flex-end;
+}
+.contenedor_card_logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 20rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color7);
+    bottom: 8rem;
+    filter: drop-shadow(.1rem .1rem .3rem #c9c9c9);
+}
+.My_portfolio {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    width: 100%;
+    position: relative;
+    bottom: 10rem;
+}
+.container_subtitulo {
+    position: relative;
+}
+.container_galeria {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+.container_img1 {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+}
+.container_img1 img {
+    width: 15rem;
+    height: 15rem;
+}
+.container_img2 {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+}
+.container_img2 img {
+    width: 15rem;
+    height: 15rem;
+}
+.container_img3 {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+}
+.container_img3 img {
+    width: 15rem;
+    height: 15rem;
+}
+.container_img4 {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+}
+.container_img4 img {
+    width: 15rem;
+    height: 15rem;
+}
+.contact {
+    position: relative;
+    height: 40rem;
+    bottom: 10rem;
+}
+.container_contact_medios {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: center;
+    bottom: -5rem;
+    position: relative;
+    gap: 16rem;
+}
+.card_box1{
+    display: flex;
+    width: 20rem;
+    height: 22rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    background-color: var(--color7);
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.phone{
+    background-color: var(--color9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff); 
+}
+.icon_phone{
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number_phone{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+}
+.card_box2{
+    display: flex;
+    width: 20rem;
+    height: 22rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    background-color: var(--color7);
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.mail {
+    background-color: var(--color9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    filter: drop-shadow(.1rem .1rem .3rem #ffff);
+}
+.icon_mail {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.electronic_mail {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+}
+/*****************************************************FOOTER******************************************************/
+footer{
+    background-color: var(--Background);
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor_name_footer{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor_name_footer > h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color1);
+}
+.details{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details > p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color1);
+}
+.details > p span{
+    color: var(--color3);
+}
+
+/****************************************************RESPONSIVE***************************************************/
+@media (max-width:1400px){
+
+}
+@media (max-width:1200px){
+    .menu_navegacion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 25rem;
+        height: 100%;
+        align-items:center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        font-size: 1rem;
+        z-index: 2;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+        gap: 0.1rem;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        justify-content: space-around;
+        list-style: none;
+    }
+    .menu_navegacion a {
+        position:relative;
+        font-size: 2rem;
+        text-decoration: none;
+        line-height: 2rem;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+        color: transparent;
+    }
+    .Button::before{
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        transition: 1s;
+        overflow: hidden;
+        border-right: 1px solid  var(--clr);
+        -webkit-text-stroke: 1px  var(--clr);
+      }
+      .Button:hover::before{
+        width: 100%;
+        filter: drop-shadow(0px 0px 45px var(--clr));
+      }
+      .spread {
+        transform: translate(0);
+    }
+.container__toggle {
+    width: 16rem;
+    height: 3.8rem;
+}
+.toggle {
+    top: .9rem;
+    width: 7rem;
+    left: -58rem;
+    gap: 1.8rem;
+    height: 3.1rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+}
+.ball {
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 2rem; 
+}
+.ball-move {
+    left: 0.3rem;
+}
+.container_titulo {
+    width: 100%;
+    top: 2rem;
+    letter-spacing: 0.2;
+}
+.container_titulo > h1 {
+    font-size: 5rem;
+}
+.container_reseña {
+    width: 60%;
+    height: 10rem;
+    bottom: 3.1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    
+}
+.container_reseña > p {
+    font-size: 2rem;
+}
+.container_img {
+    bottom: 5rem; 
+}
+.main {
+    width: 10.6rem;
+    height: 10.6rem;
+    bottom: 15rem;
+}
+.main .navigation span {
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.main .navigation.active span {
+    width: 6.88rem;
+    height: 6.88rem;
+}
+.main .navigation.active span ion-icon {
+    font-size: 3rem;
+}
+.main .navigation.active span:hover ion-icon {
+    font-size: 4rem;
+}
+.close {
+    width: .8rem;
+    height: .8rem;
+}
+.main .navigation.active~.close {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.main .navigation~.close ion-icon {
+    font-size: 3rem;
+}
+.container_colaboracion {
+    width: 50rem;
+    height: 12rem;
+    bottom: 8rem;
+    left: 1rem;
+}
+.container_detalle {
+    width: 50rem;
+    height: 3rem;
+    right: -1.2rem;
+    top: 2rem;
+    left: 0;
+}
+.container_detalle>h3 {
+    font-size: 1.5rem;
+}
+.container_correo {
+    width: 50rem;
+    height: 3.5rem;
+    top: 6rem;
+}
+.mail_bar {
+    width: 48rem;
+    height: 3rem;
+}
+.mail_bar::placeholder {
+    font-size: 1.3rem;
+    padding: 2rem;
+}
+.boton_mail {
+    right: 1rem;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+}
+.boton_mail>span {
+    font-size: 1.2rem;
+}
+.boton_mail:hover {
+    width: 10.5rem;
+    height: 3.5rem;
+}
+.container1 {
+    width: 80rem;
+    height: 40rem;
+    right: 58.2rem;
+    top: -50rem;
+}
+.container2 {
+    width: 80rem;
+    height: 40rem;
+    right: -61.2rem;
+    top: -95rem;
+}
+.subtitulo {
+    font-size: 3rem;
+}
+.about_me {
+    top: 10rem;
+    padding: 2rem 4rem;
+    height: 55rem;
+}
+.container_about_me>h3 {
+    top: 2rem;
+    right: 15rem;
+}
+.container_parrafo {
+    top: 2.5rem;
+    height: 18rem;
+    padding: 1rem 2rem;
+}
+.container_parrafo>p {
+    font-size: 1.2rem;
+}
+.linea {
+    width: 0.35rem;
+    height: 21rem;
+    left: 1.5rem;
+    bottom: 19rem;
+}
+.container_button {
+    position: relative;
+    left: 2rem;
+    top: 5rem;
+    width: 18rem;
+    height: 6rem;
+}
+.button {
+    width: 15rem;
+    height: 4.5rem;
+}
+.button span {
+    font-size: 1.3rem;
+}
+.button:hover {
+    width: 17rem;
+    height: 4.9rem;
+}
+.experience {
+    height: 50rem;
+    width: 100%;
+}
+.my_experience {
+    width: 60rem;
+    height: 25rem;
+}
+.my_experience>h3 {
+    bottom: 5rem;
+}
+.contenedor_card_logo {
+    width: 12rem;
+    height: 20rem;
+    bottom: 8rem;
+}
+.My_portfolio {
+    height: 30rem;
+    width: 100%;
+    bottom: 10rem;
+}
+.container_subtitulo {
+    position: relative;
+}
+.container_galeria {
+    width: 100%;
+    height: 30rem;
+    bottom: 0rem;
+    gap: 3rem;
+}
+.container_img1 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img1 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img2 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img2 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img3 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img3 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img4 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img4 img {
+    width: 10rem;
+    height: 10rem;
+}
+.contact {
+    height: 40rem;
+    bottom: 12rem;
+}
+.container_contact_medios {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: center;
+    bottom: -5rem;
+    position: relative;
+    gap: 16rem;
+}
+.card_box1{
+    width: 20rem;
+    height: 21rem;
+}
+.phone{
+    width: 8rem;
+    height: 8rem;
+}
+.icon_phone{
+    font-size: 4rem;
+}
+.number_phone{
+    width: 12rem;
+    height: 12rem;
+}
+.card_box2{
+    width: 20rem;
+    height: 21rem;
+}
+.mail {
+    width: 8rem;
+    height: 8rem;
+}
+.icon_mail {
+    font-size: 4rem;
+}
+.electronic_mail {
+    width: 12rem;
+    height: 12rem;
+}
+footer{
+    height: 10rem;
+}
+.contenedor_name_footer{
+    position: relative;
+    bottom: 5rem;
+    height: 5rem;
+}
+.contenedor_name_footer > h2{
+    font-size: 1.5rem;
+}
+.details{
+    position: relative;
+    height: 5rem;
+    bottom: 5rem;
+}
+.details > p{
+    font-size: 1.5rem;
+}
+
+}
+@media (max-width: 992px){
+    .menu_navegacion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 25rem;
+        height: 100%;
+        align-items:center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        font-size: 1rem;
+        z-index: 2;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+        gap: 0.1rem;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        justify-content: space-around;
+        list-style: none;
+    }
+    .menu_navegacion a {
+        position:relative;
+        font-size: 2rem;
+        text-decoration: none;
+        line-height: 2rem;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+        color: transparent;
+    }
+    .Button::before{
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        transition: 1s;
+        overflow: hidden;
+        border-right: 1px solid  var(--clr);
+        -webkit-text-stroke: 1px  var(--clr);
+      }
+      .Button:hover::before{
+        width: 100%;
+        filter: drop-shadow(0px 0px 45px var(--clr));
+      }
+      .spread {
+        transform: translate(0);
+    }
+.container__toggle {
+    width: 16rem;
+    height: 3.8rem;
+}
+.toggle {
+    top: .9rem;
+    width: 7rem;
+    left: -44rem;
+    gap: 1.8rem;
+    height: 3.1rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+}
+.ball {
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 2rem; 
+}
+.ball-move {
+    left: 0.3rem;
+}
+.container_titulo {
+    width: 100%;
+    top: 2rem;
+    letter-spacing: 0.2;
+}
+.container_titulo > h1 {
+    font-size: 5rem;
+}
+.container_reseña {
+    width: 60%;
+    height: 10rem;
+    bottom: 3.1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    
+}
+.container_reseña > p {
+    font-size: 2rem;
+}
+.container_img {
+    bottom: 5rem; 
+}
+.main {
+    width: 10.6rem;
+    height: 10.6rem;
+    bottom: 15rem;
+}
+.main .navigation span {
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.main .navigation.active span {
+    width: 6.88rem;
+    height: 6.88rem;
+}
+.main .navigation.active span ion-icon {
+    font-size: 3rem;
+}
+.main .navigation.active span:hover ion-icon {
+    font-size: 4rem;
+}
+.close {
+    width: .8rem;
+    height: .8rem;
+}
+.main .navigation.active~.close {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.main .navigation~.close ion-icon {
+    font-size: 3rem;
+}
+.container_colaboracion {
+    width: 50rem;
+    height: 12rem;
+    bottom: 8rem;
+    left: 1rem;
+}
+.container_detalle {
+    width: 50rem;
+    height: 3rem;
+    right: -1.2rem;
+    top: 2rem;
+    left: 0;
+}
+.container_detalle>h3 {
+    font-size: 1.5rem;
+}
+.container_correo {
+    width: 50rem;
+    height: 3.5rem;
+    top: 6rem;
+}
+.mail_bar {
+    width: 48rem;
+    height: 3rem;
+}
+.mail_bar::placeholder {
+    font-size: 1.3rem;
+    padding: 2rem;
+}
+.boton_mail {
+    right: 1rem;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+}
+.boton_mail>span {
+    font-size: 1.2rem;
+}
+.boton_mail:hover {
+    width: 10.5rem;
+    height: 3.5rem;
+}
+.container1 {
+    width: 80rem;
+    height: 40rem;
+    right: 58.2rem;
+    top: -50rem;
+}
+.container2 {
+    width: 80rem;
+    height: 40rem;
+    right: -61.2rem;
+    top: -95rem;
+}
+.subtitulo {
+    font-size: 3rem;
+}
+.about_me {
+    top: 10rem;
+    padding: 2rem 4rem;
+    height: 55rem;
+}
+.container_about_me>h3 {
+    top: 2rem;
+    right: 15rem;
+}
+.container_parrafo {
+    top: 2.5rem;
+    height: 18rem;
+    padding: 1rem 2rem;
+}
+.container_parrafo>p {
+    font-size: 1.2rem;
+}
+.linea {
+    width: 0.35rem;
+    height: 21rem;
+    left: 1.5rem;
+    bottom: 19rem;
+}
+.container_button {
+    position: relative;
+    left: 2rem;
+    top: 5rem;
+    width: 18rem;
+    height: 6rem;
+}
+.button {
+    width: 15rem;
+    height: 4.5rem;
+}
+.button span {
+    font-size: 1.3rem;
+}
+.button:hover {
+    width: 17rem;
+    height: 4.9rem;
+}
+.experience {
+    height: 50rem;
+    width: 100%;
+}
+.my_experience {
+    width: 60rem;
+    height: 25rem;
+}
+.my_experience>h3 {
+    bottom: 5rem;
+}
+.contenedor_card_logo {
+    width: 12rem;
+    height: 20rem;
+    bottom: 8rem;
+}
+.My_portfolio {
+    height: 30rem;
+    width: 100%;
+    bottom: 10rem;
+}
+.container_subtitulo {
+    position: relative;
+}
+.container_galeria {
+    width: 100%;
+    height: 30rem;
+    bottom: 0rem;
+    gap: 3rem;
+}
+.container_img1 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img1 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img2 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img2 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img3 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img3 img {
+    width: 10rem;
+    height: 10rem;
+}
+.container_img4 {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.container_img4 img {
+    width: 10rem;
+    height: 10rem;
+}
+.contact {
+    height: 40rem;
+    bottom: 12rem;
+}
+.container_contact_medios {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: center;
+    bottom: -5rem;
+    position: relative;
+    gap: 16rem;
+}
+.card_box1{
+    width: 20rem;
+    height: 21rem;
+}
+.phone{
+    width: 8rem;
+    height: 8rem;
+}
+.icon_phone{
+    font-size: 4rem;
+}
+.number_phone{
+    width: 12rem;
+    height: 12rem;
+}
+.card_box2{
+    width: 20rem;
+    height: 21rem;
+}
+.mail {
+    width: 8rem;
+    height: 8rem;
+}
+.icon_mail {
+    font-size: 4rem;
+}
+.electronic_mail {
+    width: 12rem;
+    height: 12rem;
+}
+footer{
+    height: 10rem;
+}
+.contenedor_name_footer{
+    position: relative;
+    bottom: 5rem;
+    height: 5rem;
+}
+.contenedor_name_footer > h2{
+    font-size: 1.5rem;
+}
+.details{
+    position: relative;
+    height: 5rem;
+    bottom: 5rem;
+}
+.details > p{
+    font-size: 1.5rem;
+}
+}
+@media (max-width: 768px){
+    .menu_navegacion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 25rem;
+        height: 100%;
+        align-items:center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        font-size: 1rem;
+        z-index: 2;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+        gap: 0.1rem;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        justify-content: space-around;
+        list-style: none;
+    }
+    .menu_navegacion a {
+        position:relative;
+        font-size: 2rem;
+        text-decoration: none;
+        line-height: 2rem;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+        color: transparent;
+    }
+    .Button::before{
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        transition: 1s;
+        overflow: hidden;
+        border-right: 1px solid  var(--clr);
+        -webkit-text-stroke: 1px  var(--clr);
+      }
+      .Button:hover::before{
+        width: 100%;
+        filter: drop-shadow(0px 0px 45px var(--clr));
+      }
+      .spread {
+        transform: translate(0);
+    }
+    header {
+        height: 91rem;
+    }
+    .container__toggle {
+        position: relative;
+        top: 0rem;
+        width: 8rem;
+        height: 3.8rem;
+        left: 5rem;
+    }
+    .container_titulo {
+        width: 80%;
+        top: 2rem;
+        letter-spacing: 0.2;
+    }
+    .container_titulo > h1 {
+        font-size: 4rem;
+    }
+    .container_reseña {
+        position: relative;
+        width: 50%;
+        height: 10rem;
+        bottom: 3rem;
+        padding: 1rem 1rem 1rem 1rem;
+        
+    }
+    .container_reseña > p {
+        font-size: 1.5rem;
+    }
+    .container_colaboracion {
+        display: flex;
+        position: relative;
+        width: 90%;
+        height: 12rem;
+        bottom: 10rem;
+        left: 0;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    .container_detalle {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+        right: -1.2rem;
+        top: 2rem;
+        left: 0;
+    }
+    .container_detalle>h3 {
+        font-size: 1.2rem;
+    }
+    .container_correo {
+        display: flex;
+        position: relative;
+        width: 95%;
+        height: 3.5rem;
+        top: 6rem;
+        left: 1rem;
+    }
+    .mail_bar {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 3rem;
+    }
+    .boton_mail {
+        display: flex;
+        position: absolute;
+        right: -.2rem;
+        align-items: center;
+    }
+    .boton_mail>span {
+        font-size: 1.2rem;
+        color: var(--color2);
+    }
+    .boton_mail:hover {
+        width: 10.2rem;
+        height: 3.5rem;
+    }
+    .about_me {
+        padding: 2rem 4rem;
+        height: 50rem;
+    }
+    .container_about_me>h3 {
+        top: 2rem;
+        right: 8rem;
+    }
+    .container_parrafo {
+        top: 6rem;
+        width: 80%;
+        height: 18rem;
+        padding: 1rem 2rem;
+    }
+    .container_parrafo>p {
+        font-size: 1.1rem;
+    }
+    .linea {
+        width: 0.35rem;
+        height: 21rem;
+        left: 5rem;
+        bottom: 9rem;
+    }
+    .container_button {
+        top: 8rem;
+        width: 15.1rem;
+        height: 6rem;
+        left:0rem;
+    }
+    .estudios {
+        height: 40rem;
+        top: 10rem;
+    }
+    .container_estudios {
+        width: 100%;
+        height: 40rem;
+        top: 0rem;
+    }
+    .container_cards {
+        height: 25rem;
+        width: 100%;
+        margin: 1rem 4rem 1rem 1rem;
+    }
+    .My_Skills {
+        height: 45rem;
+        top: 10rem;
+    }
+    .caja_padre {
+        top: 60%;
+    }
+    .experience {
+        height: 50rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my_experience {
+        position: relative;
+        top: 5rem;
+        width: 30rem;
+    }
+    .contenedor_logos {
+        width: 95%;
+    }
+    .contenedor_card_logo {
+        width: 15rem;
+        height: 20rem;
+    }
+    .logo img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .contenedor_card_logo > .name  h4{
+        font-size: 0.7rem;
+    }
+    .My_portfolio {
+        bottom: 6rem;
+        height: 50rem;
+    }
+    .container_galeria {
+        position: relative;
+        top: 5rem;
+        height: 25rem;
+        gap: 2rem;
+    }
+    .container_img1 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img1 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img2 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img2 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img3 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img3 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img4 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img4 img {
+        width: 15rem;
+        height: 15rem;
+    }
+.contact {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+    bottom: 10rem;
+}
+.container_contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+}
+.container_contact_medios {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: space-around;
+    bottom: -5rem;
+    position: relative;
+    gap: 0;
+    align-items: center;
+}
+.card_box1{
+    width: 15rem;
+    height: 22rem; 
+}
+.phone{
+    width: 6rem;
+    height: 6rem;
+}
+.icon_phone{
+    font-size: 3rem;
+}
+.number_phone{
+    width: 12rem;
+    height: 12rem;
+}
+.card_box2{
+    width: 15rem;
+    height: 22rem;
+}
+.mail {
+    width: 6rem;
+    height: 6rem;
+}
+.icon_mail {
+    font-size: 3rem;
+}
+.electronic_mail {
+    width: 12rem;
+    height: 12rem;
+}
+
+}
+@media (max-width: 576px){
+    .menu_navegacion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 20rem;
+        height: 100%;
+        align-items:center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        font-size: 1rem;
+        z-index: 2;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+        gap: 0.1rem;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        justify-content: space-around;
+        list-style: none;
+    }
+    .menu_navegacion a {
+        position:relative;
+        font-size: 2rem;
+        text-decoration: none;
+        line-height: 2rem;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+        color: transparent;
+    }
+    .Button::before{
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        transition: 1s;
+        overflow: hidden;
+        border-right: 1px solid  var(--clr);
+        -webkit-text-stroke: 1px  var(--clr);
+      }
+      .Button:hover::before{
+        width: 100%;
+        filter: drop-shadow(0px 0px 45px var(--clr));
+      }
+      .spread {
+        transform: translate(0);
+    }
+    .container__toggle {
+        position: relative;
+        top: 0rem;
+        width: 8rem;
+        height: 3.8rem;
+        left: 17rem;
+    }
+    header {
+        height: 91rem;
+    }
+    .container_titulo > h1 {
+        font-size: 3rem;
+    }
+    .container_reseña {
+        width: 80%;
+        
+    }
+    .container_reseña > p {
+        font-size: 1.4rem;
+    }
+    .container_img {
+        bottom: 5rem;
+        left: 2.5rem ;
+    }
+    .container_img img{
+        width: 80%;
+        height: 100%;
+    }
+
+    .container_card1 {
+        width: 10rem;
+        height: 5.1rem;
+        bottom: 36rem;
+        left: -11rem;
+    }
+    .container_card2 {
+        width: 10rem;
+        height: 5.1rem;
+        bottom: 27rem;
+        left: 11rem;
+    }
+    .container_colaboracion {
+        display: flex;
+        position: relative;
+        width: 90%;
+        height: 12rem;
+        bottom: 10rem;
+        left: 0;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    .container_detalle {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+        right: -1.2rem;
+        top: 2rem;
+        left: 0;
+    }
+    .container_detalle>h3 {
+        font-size: 1rem;
+    }
+    .container_correo {
+        display: flex;
+        position: relative;
+        width: 95%;
+        height: 3.5rem;
+        top: 6rem;
+        left: 1rem;
+    }
+    .mail_bar {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 3rem;
+    }
+    .boton_mail {
+        display: flex;
+        position: absolute;
+        right: -.2rem;
+        align-items: center;
+    }
+    .boton_mail>span {
+        font-size: 1.2rem;
+        color: var(--color2);
+    }
+    .boton_mail:hover {
+        width: 10.2rem;
+        height: 3.5rem;
+    }
+    .container1 {
+        width: 80rem;
+        height: 40rem;
+        right: 52.5rem;
+        top: -53.9rem;
+    }
+    .container2 {
+        width: 80rem;
+        height: 40.1rem;
+        right: -52.5rem;
+        top: -98rem;
+    }
+    .about_me {
+        position: relative;
+        top: 2rem;
+        padding: 2rem 4rem;
+        height: 55rem;
+    }
+    .container_about_me>h3 {
+        top: -6rem;
+        right: 0rem;
+    }
+    .container_parrafo {
+        top: 4rem;
+        width: 80%;
+        height: 18rem;
+        padding: 2rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .container_parrafo>p {
+        font-size: 1.3rem;
+    }
+    .linea {
+        width: 0.35rem;
+        height: 36rem;
+        left: 5rem;
+        bottom: 6rem;
+    }
+    .container_button {
+        top: 13rem;
+        width: 15.1rem;
+        height: 6rem;
+        left:0rem;
+    }
+    .estudios {
+        height: 60rem;
+        top: 2rem;
+        display: flex;
+    }
+    .container_estudios {
+        width: 100%;
+        height: 40rem;
+        top: 6.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container_cards {
+        height: 30rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .card_1{
+        width: 30rem;
+        height: 20rem;
+        position: relative;
+        left: 2rem;
+    }
+    .card_2{
+        width: 30rem;
+        height: 20rem;
+        left: 2rem;
+
+    }
+    .My_Skills {
+        height: 45rem;
+        top: 2rem;
+    }
+    .Myskills{
+        position: relative;
+        top: 3rem;
+    }
+    .caja_padre {
+        top: 60%;
+    }
+    .experience {
+        height: 50rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my_experience {
+        position: relative;
+        top: 5rem;
+        width: 30rem;
+    }
+    .contenedor_logos {
+        width: 95%;
+    }
+    .contenedor_card_logo {
+        width: 15rem;
+        height: 20rem;
+    }
+    .logo img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .contenedor_card_logo > .name  h4{
+        font-size: 0.7rem;
+    }
+    .My_portfolio {
+        bottom: 6rem;
+        height: 50rem;
+    }
+    .container_galeria {
+        position: relative;
+        top: 5rem;
+        height: 25rem;
+        gap: 2rem;
+    }
+    .container_img1 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img1 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img2 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img2 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img3 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img3 img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .container_img4 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    .container_img4 img {
+        width: 15rem;
+        height: 15rem;
+    }
+.contact {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+    bottom: 10rem;
+}
+.container_contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+}
+.container_contact_medios {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: space-around;
+    bottom: -5rem;
+    position: relative;
+    gap: 0;
+    align-items: center;
+}
+.card_box1{
+    width: 15rem;
+    height: 22rem; 
+}
+.phone{
+    width: 6rem;
+    height: 6rem;
+}
+.icon_phone{
+    font-size: 3rem;
+}
+.number_phone{
+    width: 12rem;
+    height: 12rem;
+}
+.card_box2{
+    width: 15rem;
+    height: 22rem;
+}
+.mail {
+    width: 6rem;
+    height: 6rem;
+}
+.icon_mail {
+    font-size: 3rem;
+}
+.electronic_mail {
+    width: 12rem;
+    height: 12rem;
+}
+
+}
+@media (max-width: 320px){
+    .menu_navegacion {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 15rem;
+        height: 100%;
+        align-items:center;
+        transition: transform 0.3s ease-in-out;
+        transform: translate(110%);
+        box-shadow: 0 0 20px rgb(255, 255, 255);
+        font-size: 1rem;
+        z-index: 2;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3rem rgba(255,255,255,0.5);
+        gap: 0.1rem;
+        box-sizing: content-box;
+        box-sizing: border-box;
+        justify-content: space-around;
+        list-style: none;
+    }
+    .menu_navegacion a {
+        position:relative;
+        font-size: 1.2rem;
+        text-decoration: none;
+        line-height: 1.2rem;
+        text-transform: uppercase;
+        -webkit-text-stroke: 0.5px rgba(255,255,255,0.5);
+        color: transparent;
+    }
+    .Button::before{
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        transition: 1s;
+        overflow: hidden;
+        border-right: 1px solid  var(--clr);
+        -webkit-text-stroke: 1px  var(--clr);
+      }
+      .Button:hover::before{
+        width: 100%;
+        filter: drop-shadow(0px 0px 45px var(--clr));
+      }
+      .spread {
+        transform: translate(0);
+    }
+    .container__toggle {
+        position: relative;
+        top: 0rem;
+        width: 8rem;
+        height: 3.8rem;
+        left: 32.5rem;
+    }
+    header {
+        height: 75rem;
+    }
+    .container_titulo{
+        width:90%;
+        
+    }
+    .container_titulo > h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1rem;
+    }
+    .container_reseña{
+        position: relative;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        height: 4rem;
+        width: 100%;
+        bottom: 2.2rem;
+    }
+    .container_reseña > p {
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+    .container_img {
+        bottom: 5rem;
+        left: 2.5rem ;
+    }
+    .container_img img{
+        width: 80%;
+        height: 100%;
+    }
+
+    .container_card1 {
+        width: 7rem;
+        height: 3rem;
+        bottom: 30rem;
+        left: -6rem;
+    }
+    .container_card1 > h3{
+        font-size: 0.8rem;
+    }
+    .container_card1 > h3+p{
+        font-size: 0.8rem;
+    }
+    .container_card2 {
+        width: 7rem;
+        height: 3rem;
+        bottom: 20rem;
+        left: 6rem;
+    }
+    .container_card2 > h3{
+        font-size: 0.7rem;
+    }
+    .container_card2 > h3+p{
+        font-size: 0.8rem;
+    }
+    .main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20rem;
+        bottom: 20rem;
+    }
+    .main .navigation {
+        position: relative;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+    .main .navigation span {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: var(--color1);
+        border-radius: 50%;
+        transform: translate(calc(16px * var(--x)), calc(16px * var(--y)));
+        transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+        transition-delay: calc(0.1s * var(--i));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(.3rem .3rem 1rem #ffff);
+    }
+    .main .navigation.active span {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1rem;
+        background-color: var(--color1);
+        border-radius: 50%;
+        transform: translate(calc(6rem * var(--x)), calc(6rem * var(--y)));
+        filter: drop-shadow(.3rem .3rem 1rem #ffff);
+    }
+    .main .navigation span ion-icon {
+        transition: 0.5s;
+        font-size: 0;
+    }
+    .main .navigation.active span ion-icon {
+        font-size: 2rem;
+        color: var(--Background);
+    }
+    .main .navigation.active span:hover ion-icon {
+        color: var(--color1);
+        font-size: 3rem;
+        filter: drop-shadow(0 0 2px #197f5b) drop-shadow(0 0 3px #197f5b) drop-shadow(0 0 12px #197f5b);
+    }
+    .close {
+        position: absolute;
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        background-color: var(--color1);
+        border-radius: 50%;
+        transition: 0.5s;
+        transition-delay: 0.4s;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .navigation.active~.close {
+        width: 60px;
+        height: 60px;
+        pointer-events: initial;
+        transition-delay: 0.8s;
+        background: var(--color3);
+    }
+    .main .navigation~.close ion-icon {
+        font-size: 3rem;
+        scale: 0;
+        color: var(--color2);
+        transition: 0.5s;
+    }
+    .main .navigation.active~.close ion-icon {
+        scale: 1;
+        transition-delay: 1s;
+    }
+    .container_colaboracion {
+        width: 90%;
+        height: 16rem;
+        bottom: 23rem;
+    }
+    .container_detalle>h3 {
+        font-size: .7rem;
+    }
+    .container_correo {
+        display: flex;
+        position: relative;
+        width: 90%;
+        height: 3.5rem;
+        top: 6rem;
+    }
+    .mail_bar {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 3rem;
+    }
+    .mail_bar::placeholder{
+        font-size: 1rem;
+    }
+    .boton_mail {
+        display: flex;
+        position: relative;
+        top: 5rem;
+    }
+    .boton_mail>span {
+        font-size: 1rem;
+        color: var(--color2);
+    }
+    .boton_mail:hover {
+        width: 10.2rem;
+        height: 3.5rem;
+    }
+    .about_me {
+        position: relative;
+        top: 2rem;
+        padding: 2rem 4rem;
+        height: 120rem;
+    }
+    .container_about_me{
+        width: 100%;
+    }
+    .container_about_me>h3 {
+        top: -46rem;
+        right: 0rem;
+        font-size: 1.7rem;
+    }
+    .container_parrafo {
+        top: -8rem;
+        width: 80%;
+        height: 18rem;
+        padding: 2rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .container_parrafo>p {
+        font-size: 1.4rem;
+    }
+    .linea {
+        width: 0.35rem;
+        height: 85rem;
+        left: 2rem;
+        bottom: 27rem;
+    }
+    .container_button {
+        top: 28rem;
+        width: 15.1rem;
+        height: 6rem;
+        left:0rem;
+    }
+    .estudios {
+        height: 60rem;
+        top: -12rem;
+        display: flex;
+    }
+    .container_estudios {
+        width: 100%;
+        height: 40rem;
+        top: 0rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .container_estudios > h3 {
+        top: -1rem;
+    }
+    .container_cards {
+        height: 30rem;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .card_1{
+        width: 20rem;
+        height: 20rem;
+        position: relative;
+        left: 2rem;
+    }
+    .container_titulacion > h5{
+        font-size: .9rem;
+    }
+    .My_Skills {
+        height: 45rem;
+        top: -20rem;
+    }
+    .Myskills{
+        position: relative;
+        top: 3rem;
+    }
+    .subtitulo_myskills h3{
+        font-size: 1.7rem;
+        bottom: 10rem;
+        left: 3.5rem;
+    }
+    .caja_padre {
+        top: 50%;
+    }
+    .container_Myskills{
+        width: 300px;
+        
+    }
+    .experience {
+        position: relative;
+        height: 120rem;
+        bottom: 24rem;
+        gap: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .my_experience {
+        position: relative;
+        top: 1rem;
+        width: 30rem;
+    }
+    .contenedor_logos {
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .contenedor_card_logo {
+        width: 100%;
+        height: 20rem;
+    }
+    .logo img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .contenedor_card_logo > .name  h4{
+        font-size: 0.7rem;
+    }
+    .subtitulo{
+        font-size: 1.7rem;
+    }
+    .My_portfolio {
+        bottom: 25rem;
+        height: 80rem;
+    }
+    
+.contact {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 55rem;
+    bottom: 26rem;
+}
+.container_contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+}
+.container_contact_medios {
+    gap: 2rem;
+}
+.contenedor_name_footer{
+    align-items: center;
+    bottom: 15rem;
+}
+.details{
+    bottom: 14rem;
+}
+.details > p{
+font-size: 1rem;
+}
+
+}
