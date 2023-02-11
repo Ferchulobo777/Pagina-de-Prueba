@@ -1288,6 +1288,9 @@ footer{
 .details > p{
     font-size: 1.5rem;
 }
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width:1200px){
     .menu_navegacion {
@@ -1635,7 +1638,9 @@ footer{
 .details > p{
     font-size: 1.5rem;
 }
-
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width:1024px){
     .menu_navegacion {
@@ -1983,6 +1988,9 @@ footer{
 .details > p{
     font-size: 1.5rem;
 }
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width: 992px){
     .menu_navegacion {
@@ -2329,6 +2337,9 @@ footer{
 }
 .details > p{
     font-size: 1.5rem;
+}
+.details > p span{
+    color: var(--color3);
 }
 }
 @media (max-width: 768px){
@@ -2950,6 +2961,9 @@ footer{
     width: 12rem;
     height: 12rem;
 }
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width: 576px){
     .menu_navegacion {
@@ -3305,7 +3319,9 @@ footer{
     width: 12rem;
     height: 12rem;
 }
-
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width: 414px){
     .menu_navegacion {
@@ -3703,7 +3719,9 @@ footer{
 .details > p{
 font-size: 1rem;
 }
-
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width: 400px){
     .menu_navegacion {
@@ -4101,7 +4119,9 @@ font-size: 1rem;
 .details > p{
 font-size: 1rem;
 }
-
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width:375px){
     .menu_navegacion {
@@ -4498,6 +4518,9 @@ font-size: 1rem;
 }
 .details > p{
 font-size: 1rem;
+}
+.details > p span{
+    color: var(--color3);
 }
 }
 @media (max-width:360px){
@@ -4896,6 +4919,9 @@ font-size: 1rem;
 .details > p{
 font-size: 1rem;
 }
+.details > p span{
+    color: var(--color3);
+}
 }
 @media (max-width: 320px){
     .menu_navegacion {
@@ -5287,5 +5313,7 @@ font-size: 1rem;
 .details > p{
 font-size: 1rem;
 }
-
+.details > p span{
+    color: var(--color3);
+}
 }
